@@ -1,5 +1,6 @@
 import LoginBackground from '@/components/LoginBackground'
 import petSvg from '@/assets/pet.svg'
+import LoginForm from '@/components/LoginForm'
 
 export default function LoginPage() {
   return (
@@ -12,7 +13,7 @@ export default function LoginPage() {
           </div>
         </div>
         <div className='w-1/2 flex justify-center items-center'>
-          <h1>Login</h1>
+          <LoginForm />
         </div>
       </div>
     </>
