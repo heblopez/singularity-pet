@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Loader2 } from 'lucide-react'
 import { login } from '@/services/auth.services'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginForm() {
   const initialState = {
@@ -17,37 +18,33 @@ export default function LoginForm() {
   }
 
   const [formState, setFormState] = useState(initialState)
+  const navigate = useNavigate()
 
-  const validateEmail = (email: string) => {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if (!email) return 'El email es requerido'
-    if (!emailRegex.test(email)) return 'Email inválido'
-    return ''
-  }
+  const validateField = (field: string, value: string) => {
+    const validationRules: { [key: string]: (value: string) => string } = {
+      email: email => {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+        if (!email) return 'El email es requerido'
+        if (!emailRegex.test(email)) return 'Email inválido'
+        return ''
+      },
+      password: password => {
+        if (!password) return 'La contraseña es requerida'
+        if (password.length < 6) return 'La contraseña debe tener al menos 6 caracteres'
+        return ''
+      }
+    }
 
-  const validatePassword = (password: string) => {
-    if (!password) return 'La contraseña es requerida'
-    if (password.length < 6) return 'La contraseña debe tener al menos 6 caracteres'
-    return ''
+    return validationRules[field](value)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormState(prev => ({ ...prev, data: { ...prev.data, [name]: value } }))
-
-    if (name === 'email') {
-      setFormState(prev => ({
-        ...prev,
-        validationErrors: { ...prev.validationErrors, email: validateEmail(value) }
-      }))
-    }
-
-    if (name === 'password') {
-      setFormState(prev => ({
-        ...prev,
-        validationErrors: { ...prev.validationErrors, password: validatePassword(value) }
-      }))
-    }
+    setFormState(prev => ({
+      ...prev,
+      validationErrors: { ...prev.validationErrors, [name]: validateField(name, value) }
+    }))
   }
 
   const isFormValid = () => {
@@ -67,8 +64,9 @@ export default function LoginForm() {
       const res = await login(formState.data)
 
       if ('token' in res) {
-        console.log('success on login:', res)
+        document.cookie = `token=${res.token}`
         setFormState(prev => ({ ...prev, loginError: '', isLoading: false }))
+        navigate('/')
       } else {
         console.log('res with error on login:', res)
         throw new Error(res.error)
