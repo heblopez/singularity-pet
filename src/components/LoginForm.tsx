@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Loader2 } from 'lucide-react'
+import { login } from '@/services/auth.services'
 
 export default function LoginForm() {
   const initialState = {
@@ -59,11 +60,26 @@ export default function LoginForm() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormState(prev => ({ ...prev, isLoading: true }))
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    console.log('Login: ', formState.data)
-    setFormState(prev => ({ ...prev, isLoading: false }))
+    try {
+      e.preventDefault()
+      setFormState(prev => ({ ...prev, isLoading: true }))
+
+      const res = await login(formState.data)
+
+      if ('token' in res) {
+        console.log('success on login:', res)
+        setFormState(prev => ({ ...prev, loginError: '', isLoading: false }))
+      } else {
+        console.log('res with error on login:', res)
+        throw new Error(res.error)
+      }
+    } catch (error) {
+      setFormState(prev => ({
+        ...prev,
+        isLoading: false,
+        loginError: `Error: ${(error as Error).message}`
+      }))
+    }
   }
 
   return (
@@ -80,6 +96,7 @@ export default function LoginForm() {
           <input
             type='email'
             name='email'
+            id='email'
             value={formState.data.email}
             onChange={handleChange}
             className={`block w-full max-h-[48px] shadow-input-box text-sm px-4 pt-6 pb-2 text-gray-900 bg-transparent border-1 appearance-none focus:outline-none peer
@@ -89,7 +106,7 @@ export default function LoginForm() {
           />
           <label
             htmlFor='email'
-            className='absolute text-lg leading-3 text-gray-500 duration-300 transform -translate-y-3 scale-75 -z-10 top-4 origin-[0] left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3'
+            className='absolute text-lg leading-3 text-gray-500 duration-300 transform -translate-y-3 scale-75 z-10 top-4 origin-[0] left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 cursor-text'
           >
             EMAIL
           </label>
@@ -104,6 +121,7 @@ export default function LoginForm() {
           <input
             type='password'
             name='password'
+            id='password'
             value={formState.data.password}
             onChange={handleChange}
             className={`block w-full max-h-[48px] shadow-input-box text-sm px-4 pt-6 pb-2 text-gray-900 bg-transparent border-1 appearance-none focus:outline-none peer
@@ -113,7 +131,7 @@ export default function LoginForm() {
           />
           <label
             htmlFor='password'
-            className='absolute text-lg leading-3 text-gray-500 duration-300 transform -translate-y-3 scale-75 -z-10 top-4 origin-[0] left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3'
+            className='absolute text-lg leading-3 text-gray-500 duration-300 transform -translate-y-3 scale-75 z-10 top-4 origin-[0] left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 cursor-text'
           >
             CONTRASEÑA
           </label>
