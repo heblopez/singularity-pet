@@ -1,7 +1,7 @@
 import { API_URL } from '@/config'
 import { ILoginForm } from '@/types'
 
-export async function login(
+export async function loginService(
   form: ILoginForm
 ): Promise<{ token: string } | { error: string }> {
   try {

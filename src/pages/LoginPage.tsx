@@ -12,7 +12,7 @@ export default function LoginPage() {
             <img src={petSvg} alt='pet-logo' className='w-[208px] h-[245px]' />
           </div>
         </div>
-        <div className='w-1/2 flex justify-center items-center'>
+        <div className='w-1/2 flex flex-col items-center'>
           <LoginForm />
         </div>
       </div>
