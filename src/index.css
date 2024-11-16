@@ -15,27 +15,15 @@ body {
 }
 
 #root {
-  @apply min-h-screen min-w-80 max-w-[1600px] flex flex-col mx-auto;
+  @apply min-h-screen min-w-80 flex flex-col;
 }
 
 .rectangle {
   background-color: transparent;
   position: absolute;
   top: 0;
-  right: 0;
   height: 100%;
-}
-
-.rectangle-3 {
-  width: 1108px;
-}
-
-.rectangle-2 {
-  width: 902px;
-}
-
-.rectangle-1 {
-  width: 806px;
+  width: auto;
 }
 
 input:-webkit-autofill,
