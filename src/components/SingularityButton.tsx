@@ -1,5 +1,5 @@
 interface SingularityButtonProps {
-  onClick: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void)
+  onClick?: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void)
   className?: string
   disabled?: boolean
   children?: React.ReactNode

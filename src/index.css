@@ -46,3 +46,23 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px hwb(0 100% 0% / 1) inset;
   -webkit-text-fill-color: hsla(1, 7%, 12%);
 }
+
+.dog-lower {
+  position: absolute;
+  top: -28%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  clip-path: inset(49% 0 0 0);
+}
+
+.dog-upper {
+  position: absolute;
+  top: -28%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  clip-path: inset(0 0 49% 0);
+  z-index: 2;
+  pointer-events: none;
+}
