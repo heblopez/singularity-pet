@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        tomato: '#ff6752',
+        tomato: '#FF6752',
         aluminium: '#A4AFB7',
         'dodger-blue': '#4487FF',
-        'venice-blue': '#015F91'
+        'venice-blue': '#015F91',
+        'white-smoke': '#F3F6FB'
       },
       boxShadow: {
         'input-box': '2px 3px 4px #00000029'
