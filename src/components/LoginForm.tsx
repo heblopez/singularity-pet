@@ -111,6 +111,7 @@ export default function LoginForm() {
         type='submit'
         onClick={handleSubmit}
         disabled={!isFormValid() || formState.isLoading}
+        className='font-bold text-white-smoke'
       >
         {formState.isLoading ?
           <span className='flex items-center justify-center'>

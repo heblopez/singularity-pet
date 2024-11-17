@@ -63,7 +63,7 @@ export default function HomePage() {
           path='M-22.85,125.68 C264.39,106.11 -32.45,-11.27 499.72,68.61 L500.00,150.00 L-18.34,201.82 Z'
         />
       </figure>
-      <div className='w-full h-[800px] bg-transparent mt-[25%] relative flex justify-between'>
+      <div className='w-full h-[800px] bg-transparent mt-[400px] relative flex justify-between'>
         <div className='w-1/2 flex flex-col gap-9 text-white z-10'>
           <h1 className='text-[84px] leading-[100px] font-museo font-bold max-w-[654px]'>
             We Get Pet Care
@@ -84,13 +84,13 @@ export default function HomePage() {
             <img
               src={goldenRetrieverPng}
               alt='golden-retriever'
-              className='dog-lower -top-[24%]'
+              className='dog-lower -top-[24%] w-[90%]'
             />
           </div>
           <img
             src={goldenRetrieverPng}
             alt='golden-retriever'
-            className='dog-upper -top-[24%]'
+            className='dog-upper -top-[24%] w-[90%]'
           />
         </div>
       </div>
@@ -112,7 +112,7 @@ export default function HomePage() {
           path='M-0.27,137.22 C49.38,78.82 344.52,-28.04 611.45,109.02 L500.00,0.00 L-1.41,-1.16 Z'
         />
       </figure>
-      <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[3%]'>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[48px]'>
         <div className='flex flex-col gap-10 text-tomato max-w-[484px]'>
           <h2 className='text-5xl leading-[64px] font-bold'>Our Services</h2>
           <p className='text-2xl tracking-tight leading-[34px] max-w-[368px] text-granite'>
@@ -168,7 +168,7 @@ export default function HomePage() {
         <Carousel />
       </div>
       <div className='w-[1345px] h-[1279px] bg-banana-yellow rounded-[50%] half-circle-left absolute right-0 translate-x-1/2 mt-[2889px]'></div>
-      <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[3%]'>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[48px]'>
         <div className='relative w-[663px] h-[760px] flex flex-col'>
           <div className='bg-white w-[249px] h-[249px] rounded-[20px] shadow-md flex flex-col gap-10 justify-center items-center z-10'>
             <img src={reserveSvg} alt='dog-icon' />
@@ -208,13 +208,21 @@ export default function HomePage() {
       </div>
       <div className='w-[828px] h-[567px] rounded-[50%] half-circle-right absolute -translate-x-[65%] mt-[3119px] border-dashed border-tomato border-8'></div>
       <div className='w-[450px] h-[384px] bg-banana-yellow rounded-[50%] half-circle-right absolute left-0 -translate-x-1/2 mt-[3889px]'></div>
-      <div className='w-full h-[800px] bg-transparent relative flex justify-center items-center 3xl:px-36 mt-[3%]'>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-center items-center 3xl:px-36 mt-[48px]'>
         <div className='bg-dodger-blue w-[1364px] h-[462px] rounded-[20px] px-10 py-12 flex gap-10 items-center'>
           <div className='relative w-[334px] h-[334px]'>
             <div className='relative w-full h-full bg-banana-yellow rounded-full overflow-hidden z-[1]'>
-              <img src={chihuahuaPng} alt='chihuahua' className='dog-lower -top-[28px]' />
+              <img
+                src={chihuahuaPng}
+                alt='chihuahua'
+                className='dog-lower -top-[28px] w-[90%]'
+              />
             </div>
-            <img src={chihuahuaPng} alt='chihuahua' className='dog-upper -top-[28px]' />
+            <img
+              src={chihuahuaPng}
+              alt='chihuahua'
+              className='dog-upper -top-[28px] w-[90%]'
+            />
           </div>
           <div className='flex flex-col gap-7'>
             <h2 className='text-5xl leading-[64px] font-bold text-banana-yellow'>
@@ -232,7 +240,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className='w-[134vw] h-[452px] bg-tomato absolute mt-[4717px] rounded-tl-[50%] rounded-tr-[50%]'></div>
-      <div className='flex w-full h-[371px] mx-[140px] text-2xl leading-8 z-10 py-4'>
+      <div className='flex w-full h-[372px] mx-[140px] text-2xl leading-8 z-10 pt-4'>
         <div className='w-1/4'>
           <h3 className='text-banana-yellow font-bold'>About</h3>
           <ul className='text-white-smoke mt-6'>
