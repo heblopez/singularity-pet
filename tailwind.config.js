@@ -9,7 +9,8 @@ export default {
         'dodger-blue': '#4487FF',
         'venice-blue': '#015F91',
         'white-smoke': '#F3F6FB',
-        granite: '#808080'
+        granite: '#808080',
+        'smokey-gray': '#707070'
       },
       boxShadow: {
         'input-box': '2px 3px 4px #00000029'
