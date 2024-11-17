@@ -10,7 +10,8 @@ export default {
         'venice-blue': '#015F91',
         'white-smoke': '#F3F6FB',
         granite: '#808080',
-        'smokey-gray': '#707070'
+        'smokey-gray': '#707070',
+        'banana-yellow': '#FFE530'
       },
       boxShadow: {
         'input-box': '2px 3px 4px #00000029'

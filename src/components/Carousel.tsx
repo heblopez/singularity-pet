@@ -38,7 +38,11 @@ const Carousel = () => {
                 isPrev ? 'prev' : ''
               } ${isNext ? 'next' : ''}`}
             >
-              <img src={card.avatar} alt={card.name} className='card-image' />
+              <img
+                src={card.avatar}
+                alt={card.name}
+                className='w-[80px] h-[80px] rounded-[50%]'
+              />
               <h3 className='text-3xl leading-10 font-comfortaa'>{card.name}</h3>
               <p className='mt-2 text-xl text-white-smoke'>{card.text}</p>
             </div>

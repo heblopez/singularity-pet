@@ -97,13 +97,6 @@ input:-webkit-autofill:focus {
   z-index: 1;
 }
 
-.carousel-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
 .carousel-card.active {
   transform: translateX(0) scale(1.28);
   z-index: 3;
@@ -151,4 +144,12 @@ input:-webkit-autofill:focus {
 .carousel-btn.right {
   position: absolute;
   right: 20px;
+}
+
+.half-circle-right {
+  clip-path: inset(0 0 0 50%);
+}
+
+.half-circle-left {
+  clip-path: inset(0 50% 0 0);
 }

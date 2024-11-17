@@ -8,10 +8,13 @@ import catSvg from '@/assets/svg/cat.svg'
 import houseSvg from '@/assets/svg/house.svg'
 import footprintSvg from '@/assets/svg/footprint.svg'
 import Carousel from '@/components/Carousel'
+import reserveSvg from '@/assets/svg/reserve.svg'
+import matchSvg from '@/assets/svg/match.svg'
+import relaxSvg from '@/assets/svg/relax.svg'
 
 export default function HomePage() {
   return (
-    <div className='w-full min-w-[1440px] min-h-screen px-40 flex flex-col items-center bg-white-smoke gap-14 relative overflow-hidden'>
+    <div className='w-full min-w-[1600px] min-h-screen px-40 flex flex-col items-center bg-white-smoke gap-14 relative overflow-hidden'>
       <div className='absolute w-full h-[158px] bg-tomato px-36 py-8 z-10'>
         <div className='flex justify-between items-center'>
           <Link to='/'>
@@ -100,7 +103,7 @@ export default function HomePage() {
           path='M-0.27,137.22 C49.38,78.82 344.52,-28.04 611.45,109.02 L500.00,0.00 L-1.41,-1.16 Z'
         />
       </figure>
-      <div className='w-full h-[800px] bg-transparent relative flex justify-between px-24 3xl:px-36 mt-[3%]'>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[3%]'>
         <div className='flex flex-col gap-10 text-tomato max-w-[484px]'>
           <h2 className='text-5xl leading-[64px] font-bold'>Our Services</h2>
           <p className='text-2xl tracking-tight leading-[34px] max-w-[368px] text-granite'>
@@ -109,7 +112,7 @@ export default function HomePage() {
           <p className='text-2xl leading-8 font-bold tracking-tighter'>
             Enter Your Location and Fetch Our Services
           </p>
-          <SingularityButton className='bg-white shadow-xl w-full max-w-[293px] h-[80px] py-0 px-3 hover:bg-white hover:opacity-80'>
+          <SingularityButton className='bg-white shadow-xl w-full max-w-[293px] h-[80px] py-0 px-3 hover:bg-white hover:opacity-90'>
             <div className='flex justify-between items-center'>
               <input
                 className='text-granite text-2xl leading-8 ml-6 w-full max-w-[60%] h-full py-2 focus:outline-none'
@@ -149,12 +152,52 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className='w-full h-[650px] bg-transparent mt-[112px] relative flex flex-col items-center gap-20'>
+      <div className='w-full h-[650px] bg-transparent mt-[124px] relative flex flex-col items-center gap-20'>
         <h2 className='text-tomato font-comfortaa text-5xl leading-[64px] font-bold max-w-[750px]'>
           Here's what pet owners have to say about Fetch! Pet Care...
         </h2>
         <Carousel />
       </div>
+      <div className='w-[1345px] h-[1345px] bg-banana-yellow rounded-[50%] half-circle-left absolute right-0 translate-x-1/2 mt-[2989px]'></div>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[3%]'>
+        <div className='relative w-[663px] h-[760px] flex flex-col'>
+          <div className='bg-white w-[249px] h-[249px] rounded-[20px] shadow-md flex flex-col gap-10 justify-center items-center z-10'>
+            <img src={reserveSvg} alt='dog-icon' />
+            <p className='text-smokey-gray font-comfortaa text-2xl leading-8'>Reserve</p>
+          </div>
+          <div className='bg-white w-[249px] h-[249px] rounded-[20px] shadow-md flex flex-col gap-10 justify-center items-center self-end z-10'>
+            <img src={matchSvg} alt='dog-icon' />
+            <p className='text-smokey-gray font-comfortaa text-2xl leading-8'>Match</p>
+          </div>
+          <div className='bg-white w-[249px] h-[249px] rounded-[20px] shadow-md flex flex-col gap-10 justify-center items-center z-10'>
+            <img src={relaxSvg} alt='dog-icon' />
+            <p className='text-smokey-gray font-comfortaa text-2xl leading-8'>Relax</p>
+          </div>
+        </div>
+        <div className='flex flex-col gap-10 text-tomato max-w-[484px]'>
+          <h2 className='text-5xl leading-[64px] font-bold'>How it Works</h2>
+          <p className='text-2xl tracking-tight leading-[34px] max-w-[368px] text-granite'>
+            Because finding a good pet sitter shouldn't be a hassle. With Fetch! It's as
+            easy as…
+          </p>
+          <p className='text-2xl leading-8 font-bold tracking-tighter'>
+            Enter Your Location and Fetch Our Services
+          </p>
+          <SingularityButton className='bg-white shadow-xl w-full max-w-[293px] h-[80px] py-0 px-3 hover:bg-white hover:opacity-90'>
+            <div className='flex justify-between items-center'>
+              <input
+                className='text-granite text-2xl leading-8 ml-6 w-full max-w-[60%] h-full py-2 focus:outline-none'
+                type='text'
+                placeholder='Zip Code'
+              />
+              <span className='bg-tomato rounded-full h-16 w-16 flex justify-center items-center text-4xl font-bold'>
+                →
+              </span>
+            </div>
+          </SingularityButton>
+        </div>
+      </div>
+      <div className='w-[828px] h-[567px] rounded-[50%] half-circle-right absolute -translate-x-[65%] mt-[3119px] border-dashed border-tomato border-8'></div>
     </div>
   )
 }
