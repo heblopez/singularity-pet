@@ -1,6 +1,6 @@
-import loginLayer1 from '@/assets/login-layer-1.svg'
-import loginLayer2 from '@/assets/login-layer-2.svg'
-import loginLayer3 from '@/assets/login-layer-3.svg'
+import loginLayer1 from '@/assets/svg/login-layer-1.svg'
+import loginLayer2 from '@/assets/svg/login-layer-2.svg'
+import loginLayer3 from '@/assets/svg/login-layer-3.svg'
 
 export default function LoginBackground() {
   return (

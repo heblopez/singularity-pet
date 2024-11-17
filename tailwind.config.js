@@ -8,7 +8,8 @@ export default {
         aluminium: '#A4AFB7',
         'dodger-blue': '#4487FF',
         'venice-blue': '#015F91',
-        'white-smoke': '#F3F6FB'
+        'white-smoke': '#F3F6FB',
+        granite: '#808080'
       },
       boxShadow: {
         'input-box': '2px 3px 4px #00000029'
@@ -19,8 +20,9 @@ export default {
         '4xl': '1920px'
       },
       fontFamily: {
-        gibson: ['Gibson SemiBold'],
-        museo: ['Museo Sans Rounded']
+        gibson: 'Gibson SemiBold',
+        museo: 'Museo Sans Rounded',
+        comfortaa: 'Comfortaa'
       }
     }
   },

@@ -1,5 +1,5 @@
 import LoginBackground from '@/components/LoginBackground'
-import petSvg from '@/assets/pet.svg'
+import petSvg from '@/assets/svg/pet.svg'
 import LoginForm from '@/components/LoginForm'
 
 export default function LoginPage() {
