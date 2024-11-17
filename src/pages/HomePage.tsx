@@ -7,10 +7,11 @@ import dogSvg from '@/assets/svg/dog.svg'
 import catSvg from '@/assets/svg/cat.svg'
 import houseSvg from '@/assets/svg/house.svg'
 import footprintSvg from '@/assets/svg/footprint.svg'
+import Carousel from '@/components/Carousel'
 
 export default function HomePage() {
   return (
-    <div className='w-full min-w-[1280px] min-h-screen px-36 flex flex-col items-center bg-white-smoke gap-14 relative overflow-hidden'>
+    <div className='w-full min-w-[1440px] min-h-screen px-40 flex flex-col items-center bg-white-smoke gap-14 relative overflow-hidden'>
       <div className='absolute w-full h-[158px] bg-tomato px-36 py-8 z-10'>
         <div className='flex justify-between items-center'>
           <Link to='/'>
@@ -58,7 +59,7 @@ export default function HomePage() {
           path='M-22.85,125.68 C264.39,106.11 -32.45,-11.27 499.72,68.61 L500.00,150.00 L-18.34,201.82 Z'
         />
       </figure>
-      <div className='w-full h-[800px] bg-transparent mt-[39vh] relative flex justify-between'>
+      <div className='w-full h-[800px] bg-transparent mt-[25%] relative flex justify-between'>
         <div className='w-1/2 flex flex-col gap-9 text-white z-10'>
           <h1 className='text-[84px] leading-[100px] font-museo font-bold max-w-[654px]'>
             We Get Pet Care
@@ -99,9 +100,9 @@ export default function HomePage() {
           path='M-0.27,137.22 C49.38,78.82 344.52,-28.04 611.45,109.02 L500.00,0.00 L-1.41,-1.16 Z'
         />
       </figure>
-      <div className='w-full h-[800px] bg-transparent relative flex justify-between px-24 3xl:px-36'>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-between px-24 3xl:px-36 mt-[3%]'>
         <div className='flex flex-col gap-10 text-tomato max-w-[484px]'>
-          <h1 className='text-5xl leading-[64px] font-bold'>Our Services</h1>
+          <h2 className='text-5xl leading-[64px] font-bold'>Our Services</h2>
           <p className='text-2xl tracking-tight leading-[34px] max-w-[368px] text-granite'>
             National Brand With a Local Feel. Experience the Fetch! Difference
           </p>
@@ -147,6 +148,12 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+      </div>
+      <div className='w-full h-[650px] bg-transparent mt-[112px] relative flex flex-col items-center gap-20'>
+        <h2 className='text-tomato font-comfortaa text-5xl leading-[64px] font-bold max-w-[750px]'>
+          Here's what pet owners have to say about Fetch! Pet Care...
+        </h2>
+        <Carousel />
       </div>
     </div>
   )
