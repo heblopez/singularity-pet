@@ -2,23 +2,15 @@ import { ICarouselCard } from '@/types'
 import { useState } from 'react'
 import avatarPng from '@/assets/png/avatar.png'
 
-const exampleCard: ICarouselCard = {
-  name: 'Kenned Dsouza',
-  avatar: avatarPng,
-  text: '"I like that I got to meet the dog Walker who is walking my dog daily and consult with her. I also appreciate the daily communication I get about the dog and how my dog is doing"'
-}
-
-const cards: ICarouselCard[] = [exampleCard].concat([...Array(2)].map(() => exampleCard))
-
-const Carousel = () => {
+export default function Carousel({ reviews }: { reviews: ICarouselCard[] }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextCard = () => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % cards.length)
+    setCurrentIndex(prevIndex => (prevIndex + 1) % reviews.length)
   }
 
   const prevCard = () => {
-    setCurrentIndex(prevIndex => (prevIndex - 1 + cards.length) % cards.length)
+    setCurrentIndex(prevIndex => (prevIndex - 1 + reviews.length) % reviews.length)
   }
 
   return (
@@ -27,10 +19,10 @@ const Carousel = () => {
         ←
       </button>
       <div className='carousel'>
-        {cards.map((card, index) => {
+        {reviews.map((card, index) => {
           const isActive = index === currentIndex
-          const isPrev = index === (currentIndex - 1 + cards.length) % cards.length
-          const isNext = index === (currentIndex + 1) % cards.length
+          const isPrev = index === (currentIndex - 1 + reviews.length) % reviews.length
+          const isNext = index === (currentIndex + 1) % reviews.length
 
           return (
             <div
@@ -40,7 +32,7 @@ const Carousel = () => {
               } ${isNext ? 'next' : ''}`}
             >
               <img
-                src={card.avatar}
+                src={card.avatar || avatarPng}
                 alt={card.name}
                 className='w-[80px] h-[80px] rounded-[50%]'
               />
@@ -56,5 +48,3 @@ const Carousel = () => {
     </div>
   )
 }
-
-export default Carousel

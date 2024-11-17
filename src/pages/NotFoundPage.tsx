@@ -1,7 +1,26 @@
-import lottieFootPrint from '@/assets/footprint.gif'
 import SingularityButton from '@/components/SingularityButton'
 import { Link, useNavigate } from 'react-router-dom'
 import dogPng from '@/assets/png/dog-404.png'
+import { PawPrint } from 'lucide-react'
+
+function renderPawPrints(numberOfPaws: number) {
+  return (
+    <>
+      {[...Array(numberOfPaws)].map((_, i) => (
+        <PawPrint
+          key={i}
+          className='absolute animate-float w-[40px] h-[40px]'
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+            transform: `rotate(${Math.random() * 360}deg)`
+          }}
+        />
+      ))}
+    </>
+  )
+}
 
 export default function NotFoundPage() {
   const navigate = useNavigate()
@@ -42,20 +61,8 @@ export default function NotFoundPage() {
           </div>
         </div>
       </div>
-      <div className='absolute inset-0 opacity-50 w-[80vw] h-[80vh] overflow-hidden bottom-0 left-[20vw]'>
-        {[...Array(7)].map((_, i) => (
-          <img
-            key={i}
-            src={lottieFootPrint}
-            className='absolute animate-float'
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              transform: `rotate(${Math.random() * 360}deg)`
-            }}
-          />
-        ))}
+      <div className='absolute inset-0 opacity-10 w-full h-full overflow-hidden'>
+        {renderPawPrints(12)}
       </div>
     </div>
   )

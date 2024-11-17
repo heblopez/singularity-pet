@@ -15,3 +15,7 @@ export const validateFormField = (field: 'email' | 'password', value: string) =>
 
   return validationRules[field](value)
 }
+
+export const repeatObject = (obj: any, times: number) => {
+  return [...Array(times)].map(() => obj)
+}

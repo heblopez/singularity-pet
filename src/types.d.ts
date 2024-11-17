@@ -5,6 +5,6 @@ export interface ILoginForm {
 
 export interface ICarouselCard {
   name: string
-  avatar: string
+  avatar?: string
   text: string
 }
