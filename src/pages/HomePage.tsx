@@ -11,6 +11,7 @@ import Carousel from '@/components/Carousel'
 import reserveSvg from '@/assets/svg/reserve.svg'
 import matchSvg from '@/assets/svg/match.svg'
 import relaxSvg from '@/assets/svg/relax.svg'
+import chihuahuaPng from '@/assets/png/chihuahua.png'
 
 export default function HomePage() {
   return (
@@ -80,9 +81,17 @@ export default function HomePage() {
         </div>
         <div className='relative w-[409.5px] h-[409.5px] 3xl:w-[546px] 3xl:h-[546px]'>
           <div className='relative w-full h-full bg-yellow-300 rounded-full overflow-hidden z-[1]'>
-            <img src={goldenRetrieverPng} alt='golden-retriever' className='dog-lower' />
+            <img
+              src={goldenRetrieverPng}
+              alt='golden-retriever'
+              className='dog-lower -top-[24%]'
+            />
           </div>
-          <img src={goldenRetrieverPng} alt='golden-retriever' className='dog-upper' />
+          <img
+            src={goldenRetrieverPng}
+            alt='golden-retriever'
+            className='dog-upper -top-[24%]'
+          />
         </div>
       </div>
       <figure className='w-full h-[800px] absolute'>
@@ -112,7 +121,7 @@ export default function HomePage() {
           <p className='text-2xl leading-8 font-bold tracking-tighter'>
             Enter Your Location and Fetch Our Services
           </p>
-          <SingularityButton className='bg-white shadow-xl w-full max-w-[293px] h-[80px] py-0 px-3 hover:bg-white hover:opacity-90'>
+          <SingularityButton className='bg-white shadow-xl w-full max-w-[293px] h-[80px] py-0 px-3 hover:bg-white hover:opacity-90 text-white-smoke'>
             <div className='flex justify-between items-center'>
               <input
                 className='text-granite text-2xl leading-8 ml-6 w-full max-w-[60%] h-full py-2 focus:outline-none'
@@ -153,12 +162,12 @@ export default function HomePage() {
         </div>
       </div>
       <div className='w-full h-[650px] bg-transparent mt-[124px] relative flex flex-col items-center gap-20'>
-        <h2 className='text-tomato font-comfortaa text-5xl leading-[64px] font-bold max-w-[750px]'>
+        <h2 className='text-tomato text-5xl leading-[64px] font-bold max-w-[750px]'>
           Here's what pet owners have to say about Fetch! Pet Care...
         </h2>
         <Carousel />
       </div>
-      <div className='w-[1345px] h-[1345px] bg-banana-yellow rounded-[50%] half-circle-left absolute right-0 translate-x-1/2 mt-[2989px]'></div>
+      <div className='w-[1345px] h-[1279px] bg-banana-yellow rounded-[50%] half-circle-left absolute right-0 translate-x-1/2 mt-[2889px]'></div>
       <div className='w-full h-[800px] bg-transparent relative flex justify-between 3xl:px-36 mt-[3%]'>
         <div className='relative w-[663px] h-[760px] flex flex-col'>
           <div className='bg-white w-[249px] h-[249px] rounded-[20px] shadow-md flex flex-col gap-10 justify-center items-center z-10'>
@@ -190,7 +199,7 @@ export default function HomePage() {
                 type='text'
                 placeholder='Zip Code'
               />
-              <span className='bg-tomato rounded-full h-16 w-16 flex justify-center items-center text-4xl font-bold'>
+              <span className='bg-tomato rounded-full h-16 w-16 flex justify-center items-center text-4xl font-bold text-white-smoke'>
                 →
               </span>
             </div>
@@ -198,6 +207,81 @@ export default function HomePage() {
         </div>
       </div>
       <div className='w-[828px] h-[567px] rounded-[50%] half-circle-right absolute -translate-x-[65%] mt-[3119px] border-dashed border-tomato border-8'></div>
+      <div className='w-[450px] h-[384px] bg-banana-yellow rounded-[50%] half-circle-right absolute left-0 -translate-x-1/2 mt-[3889px]'></div>
+      <div className='w-full h-[800px] bg-transparent relative flex justify-center items-center 3xl:px-36 mt-[3%]'>
+        <div className='bg-dodger-blue w-[1364px] h-[462px] rounded-[20px] px-10 py-12 flex gap-10 items-center'>
+          <div className='relative w-[334px] h-[334px]'>
+            <div className='relative w-full h-full bg-banana-yellow rounded-full overflow-hidden z-[1]'>
+              <img src={chihuahuaPng} alt='chihuahua' className='dog-lower -top-[28px]' />
+            </div>
+            <img src={chihuahuaPng} alt='chihuahua' className='dog-upper -top-[28px]' />
+          </div>
+          <div className='flex flex-col gap-7'>
+            <h2 className='text-5xl leading-[64px] font-bold text-banana-yellow'>
+              Make Fetch! Happen
+            </h2>
+            <p className='w-auto max-w-[910px] text-[28px] leading-[44px] text-white-smoke'>
+              If you love pets and want exciting work, apply to be a Fetch! Pet Care
+              Provider! We train every team member and provide ongoing support to help you
+              get the most from your experience.
+            </p>
+            <SingularityButton className='mt-1 bg-white-smoke text-tomato max-w-[165px] px-9 py-6 text-xl leading-7 font-bold hover:text-white hover:bg-tomato'>
+              Join Now
+            </SingularityButton>
+          </div>
+        </div>
+      </div>
+      <div className='w-[134vw] h-[452px] bg-tomato absolute mt-[4717px] rounded-tl-[50%] rounded-tr-[50%]'></div>
+      <div className='flex w-full h-[371px] mx-[140px] text-2xl leading-8 z-10 py-4'>
+        <div className='w-1/4'>
+          <h3 className='text-banana-yellow font-bold'>About</h3>
+          <ul className='text-white-smoke mt-6'>
+            <li className='mb-5'>Locations</li>
+            <li className='mb-5'>Franchise With Us</li>
+            <li className='mb-5'>Partners</li>
+            <li className='mb-5'>About Us</li>
+            <li className='mb-5'>Make Fetch Happen!</li>
+          </ul>
+        </div>
+        <div className='w-1/4'>
+          <h3 className='text-banana-yellow font-bold'>Resources</h3>
+          <ul className='text-white-smoke mt-6'>
+            <li className='mb-5'>Reviews</li>
+            <li className='mb-5'>Pet Resource Center</li>
+            <li className='mb-5'>Media Fact Sheet</li>
+            <li className='mb-5'>Blog</li>
+            <li className='mb-5'>News</li>
+          </ul>
+        </div>
+        <div className='w-1/4'>
+          <span className='text-banana-yellow font-bold opacity-0'>{'_'}</span>
+          <ul className='text-white-smoke mt-6'>
+            <li className='mb-5'>Gift Cards</li>
+            <li className='mb-5'>Services</li>
+            <li className='mb-5'>Franchisee Login</li>
+            <li className='mb-5'>Terms of Use</li>
+            <li className='mb-5'>Privacy Policy</li>
+          </ul>
+        </div>
+        <div className='w-1/4 flex flex-col gap-6'>
+          <h3 className='text-banana-yellow font-bold'>Newsletter</h3>
+          <p className='text-white-smoke mt-6 gap-5'>
+            Sign up to receive the Fetch! Family Newsletter
+          </p>
+          <SingularityButton className='bg-white shadow-xl w-full max-w-[398px] h-[80px] py-0 px-3 hover:bg-white hover:opacity-90'>
+            <div className='flex justify-between items-center'>
+              <input
+                className='text-granite text-2xl leading-8 ml-6 w-full max-w-[60%] h-full py-2 focus:outline-none'
+                type='text'
+                placeholder='Email Address'
+              />
+              <span className='bg-tomato rounded-full h-16 w-16 flex justify-center items-center text-4xl font-bold text-white-smoke'>
+                →
+              </span>
+            </div>
+          </SingularityButton>
+        </div>
+      </div>
     </div>
   )
 }

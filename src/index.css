@@ -49,7 +49,6 @@ input:-webkit-autofill:focus {
 
 .dog-lower {
   position: absolute;
-  top: -28%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -58,7 +57,6 @@ input:-webkit-autofill:focus {
 
 .dog-upper {
   position: absolute;
-  top: -28%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -105,7 +103,6 @@ input:-webkit-autofill:focus {
 
 .carousel-card.prev {
   transform: translateX(-67%);
-
 }
 
 .carousel-card.next {
