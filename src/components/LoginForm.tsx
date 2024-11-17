@@ -83,6 +83,7 @@ export default function LoginForm() {
           value={formState.data.email}
           onChange={handleChange}
           errorMessage={formState.validationErrors.email}
+          autoComplete='email'
         />
         <SingularityInput
           label='Contraseña'
@@ -92,6 +93,7 @@ export default function LoginForm() {
           onChange={handleChange}
           errorMessage={formState.validationErrors.password}
           type='password'
+          autoComplete='current-password'
         />
       </div>
 

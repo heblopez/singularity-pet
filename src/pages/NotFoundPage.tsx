@@ -25,7 +25,7 @@ function renderPawPrints(numberOfPaws: number) {
 export default function NotFoundPage() {
   const navigate = useNavigate()
   return (
-    <div className='absolute overflow-hidden top-0 left-0 w-full bg-[url("src/assets/svg/bg-404.svg")] bg-cover'>
+    <div className='absolute overflow-hidden top-0 left-0 w-full bg-[url("/bg-404.svg")] bg-cover'>
       <div className='flex items-center justify-center h-screen w-full min-w-80 max-w-7xl 3xl:max-w-screen-2xl mx-auto px-8'>
         <div className='w-1/2 hidden md:flex md:justify-center'>
           <div className='relative w-[400px] h-[400px] flex justify-center items-end'>

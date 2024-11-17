@@ -7,6 +7,7 @@ export interface SingularityInputProps {
   className?: string
   type?: string
   errorMessage?: string
+  autoComplete?: string
 }
 
 export default function SingularityInput({
@@ -17,7 +18,8 @@ export default function SingularityInput({
   onChange,
   className,
   type = 'text',
-  errorMessage
+  errorMessage,
+  autoComplete
 }: SingularityInputProps) {
   return (
     <div className='relative'>
@@ -30,6 +32,7 @@ export default function SingularityInput({
         className={`w-full max-h-[48px] shadow-input-box text-sm px-4 pt-6 pb-2 text-gray-900 bg-transparent border-1 appearance-none focus:outline-none peer
                 ${errorMessage ? 'border-red-500' : 'border-gray-200 focus:border-blue-500'} ${className}`}
         placeholder=' '
+        autoComplete={autoComplete}
       />
       <label
         htmlFor={id}
