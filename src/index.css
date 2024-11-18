@@ -97,6 +97,8 @@ input:-webkit-autofill:focus {
   transform: translateX(0) scale(1.28);
   z-index: 3;
   background-color: #4487ff;
+  background-image: url('/bg-main-card.svg');
+  background-size: cover;
 }
 
 .carousel-card.prev {
@@ -112,6 +114,8 @@ input:-webkit-autofill:focus {
   opacity: 0.9;
   z-index: 2;
   background-color: #ff6752;
+  background-image: url('/bg-secondary-card.svg');
+  background-size: cover;
 }
 
 .carousel-card.hidden {
@@ -161,4 +165,8 @@ input:-webkit-autofill:focus {
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
+}
+
+.text-shadow-white {
+  text-shadow: 2px 2px 8px #fff;
 }

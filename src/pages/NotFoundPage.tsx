@@ -35,7 +35,7 @@ export default function NotFoundPage() {
         </div>
 
         <div className='w-[70%] flex flex-col gap-9 text-smokey-gray'>
-          <h1 className='text-[84px] leading-[100px] font-museo font-bold max-w-[654px] text-tomato z-50'>
+          <h1 className='text-[84px] leading-[100px] font-museo font-bold max-w-[654px] text-tomato z-50 text-shadow-white'>
             Error 404: Page Not Found
           </h1>
           <p className='text-xl leading-8 max-w-[595px] z-50'>
