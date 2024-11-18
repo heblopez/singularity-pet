@@ -3,7 +3,7 @@ import SingularityButton from './SingularityButton'
 export default function Footer() {
   return (
     <>
-      <div className='w-[134vw] h-[452px] bg-tomato absolute mt-[4717px] rounded-tl-[50%] rounded-tr-[50%]'></div>
+      <div className='w-[134%] h-[452px] bg-tomato absolute mt-[4717px] rounded-tl-[50%] rounded-tr-[50%]'></div>
       <div className='flex w-full h-[372px] mx-[140px] text-2xl leading-8 z-10 pt-4'>
         <div className='w-1/4'>
           <h3 className='text-banana-yellow font-bold'>About</h3>
